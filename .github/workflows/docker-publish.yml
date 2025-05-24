@@ -30,8 +30,8 @@ jobs:
             exit 1
           fi
 
-          # Target directory for the final model files (must match Dockerfile expectations)
-          MODEL_CONTENTS_TARGET_DIR="./src/outputs"
+          # Target directory for the final model files, matching application's expectation
+          MODEL_CONTENTS_TARGET_DIR="./src/outputs/checkpoint-320"
           mkdir -p "$MODEL_CONTENTS_TARGET_DIR"
 
           # Temporary directory to download and extract the GDrive folder
@@ -73,6 +73,7 @@ jobs:
           rm -rf "$DOWNLOAD_ROOT_DIR"
 
           # Verify key model files exist in the target directory (adjust filenames as needed)
+          # This check now looks inside the 'checkpoint-320' subdirectory
           if [ ! -f "$MODEL_CONTENTS_TARGET_DIR/config.json" ] || [ ! -f "$MODEL_CONTENTS_TARGET_DIR/pytorch_model.bin" ]; then
             echo "Warning: Key model files (config.json or pytorch_model.bin) not found in $MODEL_CONTENTS_TARGET_DIR after preparation."
             echo "Please ensure GDRIVE_MODEL_FILE_ID points to a folder containing these files directly."
