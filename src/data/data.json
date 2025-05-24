@@ -1,0 +1,962 @@
+[
+    {
+      "Email Number": 1,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "Kindly abstract the attached lease agreement for the \"Maple Street Retail\" property. Focus on identifying the key financial terms, such as base rent, percentage rent, and any applicable abatements."
+    },
+    {
+      "Email Number": 2,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "I need a full abstraction of the lease for the \"Smith Office Building\" (see attached). Please prioritize the tenant improvement allowance, common area maintenance (CAM) charges, and any early termination clauses."
+    },
+    {
+      "Email Number": 3,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "Please analyze the attached lease document for the \"Greenwood Apartments\" and extract all information related to renewal options, notice periods for renewal, and any conditions for exercising those options."
+    },
+    {
+      "Email Number": 4,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "We require a summary of the \"Riverbend Industrial Park\" lease. Specifically, provide details on the commencement and expiry dates, rent payment frequency, and any late payment penalties."
+    },
+    {
+      "Email Number": 5,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "Could you abstract the landlord and tenant names, their respective contact information, and any guarantees associated with the \"Willow Creek Plaza\" lease (attached)?"
+    },
+    {
+      "Email Number": 6,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "Please identify all insurance requirements and indemnification clauses within the attached \"Downtown Lofts\" lease agreement."
+    },
+    {
+      "Email Number": 7,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "For the \"Lakeside Medical Center\" lease (PDF provided), I need a detailed breakdown of the escalation schedule, including the frequency and method of rent increases."
+    },
+    {
+      "Email Number": 8,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "Abstract the permitted use clause and any restrictions on alterations or improvements from the \"Gateway Business Park\" lease."
+    },
+    {
+      "Email Number": 9,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "Please provide an abstract of the assignment and subletting provisions found in the \"Oceanview Condos\" lease."
+    },
+    {
+      "Email Number": 10,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "From the attached \"Heritage Building\" lease, extract information regarding security deposits, letters of credit, and their respective return conditions."
+    },
+    {
+      "Email Number": 11,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "Could you abstract all default and remedies clauses from the \"Sunrise Mall\" lease agreement?"
+    },
+    {
+      "Email Number": 12,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "Please identify all landlord obligations and tenant responsibilities related to maintenance and repairs in the \"Parkside Community Center\" lease."
+    },
+    {
+      "Email Number": 13,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "We need an abstraction of the \"Crossroads Distribution Center\" lease focusing on any options to expand or contract the leased premises."
+    },
+    {
+      "Email Number": 14,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "From the attached \"Urban Development Project\" lease, please extract details about any construction allowances or tenant improvement contributions from the landlord."
+    },
+    {
+      "Email Number": 15,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "Abstract the parking provisions and any specific parking rates or allocations from the \"Central Business District\" lease."
+    },
+    {
+      "Email Number": 16,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "Kindly provide an abstract of the notice provisions and governing law clause in the \"Garden District Lofts\" lease."
+    },
+    {
+      "Email Number": 17,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "From the \"Tech Hub Campus\" lease (attached), please extract all clauses related to hazardous materials and environmental compliance."
+    },
+    {
+      "Email Number": 18,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "We require an abstraction of any co-tenancy clauses and their implications from the \"Mega Shopping Center\" lease."
+    },
+    {
+      "Email Number": 19,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "Please identify all force majeure clauses and their impact on rent abatement or lease termination in the \"Global Logistics Hub\" lease."
+    },
+    {
+      "Email Number": 20,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "Extract lease metadata and clauses (e.g., rent, term, landlord, tenant, renewal).",
+      "Email Body": "Abstract the lease for the \"Grandview Estates\" property (PDF attached). We need a summary of the base rent, term, options to purchase, and any clauses regarding property taxes."
+    },
+    {
+      "Email Number": 21,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Please compare the attached LOI and the final lease for the \"Harborfront Towers\" project. Highlight any discrepancies in the rent schedule or free rent periods."
+    },
+    {
+      "Email Number": 22,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "I need a side-by-side comparison of the LOI and the executed lease for \"Pine Ridge Office Park.\" Specifically, focus on the term length and renewal options."
+    },
+    {
+      "Email Number": 23,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Review the LOI and the draft lease for \"Metro Retail Plaza.\" Identify any changes in the permitted use clause or tenant obligations."
+    },
+    {
+      "Email Number": 24,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Compare the security deposit amount and conditions as stated in the LOI versus the final lease for \"Green Valley Apartments.\""
+    },
+    {
+      "Email Number": 25,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Could you please compare the LOI and the lease for \"Industrial Park West\" regarding the common area maintenance (CAM) charges and caps?"
+    },
+    {
+      "Email Number": 26,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "I'm attaching the LOI and the final lease for \"Downtown Arts District.\" Please flag any differences in the landlord's contribution to tenant improvements."
+    },
+    {
+      "Email Number": 27,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Perform a comparison of the LOI and the executed lease for \"Suburban Office Complex\" concerning the early termination clauses and penalties."
+    },
+    {
+      "Email Number": 28,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "We need a report detailing the differences between the LOI and the executed lease for \"Riverfront Condos,\" specifically for assignment and subletting rights."
+    },
+    {
+      "Email Number": 29,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Please compare the LOI and the final lease for \"Tech Campus North\" and highlight any changes in the insurance requirements or indemnification clauses."
+    },
+    {
+      "Email Number": 30,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Review the attached LOI and the lease for \"Healthcare Professional Building.\" Point out any discrepancies in the notice periods for renewal or termination."
+    },
+    {
+      "Email Number": 31,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Compare the LOI and the final lease for \"Logistics Hub East.\" Are there any deviations in the delivery condition of the premises or landlord's work?"
+    },
+    {
+      "Email Number": 32,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "I need to know how the utilities and operating expenses differ between the LOI and the final lease for \"Mixed-Use Development.\""
+    },
+    {
+      "Email Number": 33,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Please compare the LOI and the lease for \"Residential Tower A\" regarding the parking provisions and any associated costs."
+    },
+    {
+      "Email Number": 34,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Review the LOI and the lease for \"Education Campus Annex.\" Identify any new or changed clauses related to signage rights."
+    },
+    {
+      "Email Number": 35,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Compare the default and remedies clauses in the LOI versus the final lease for \"Data Center Solutions.\""
+    },
+    {
+      "Email Number": 36,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "I'm sending the LOI and the lease for \"Waterfront Restaurant.\" Please highlight any differences in the exclusive use provisions."
+    },
+    {
+      "Email Number": 37,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Could you compare the LOI and the final lease for \"Biotech Research Park\" to see if there are any changes in environmental compliance clauses?"
+    },
+    {
+      "Email Number": 38,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Please review the LOI and the lease for \"Community Sports Complex.\" Note any deviations in the condition precedent clauses."
+    },
+    {
+      "Email Number": 39,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "Compare the force majeure clauses in the LOI and the final lease for \"Global Commerce Center.\""
+    },
+    {
+      "Email Number": 40,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "Compare the LOI (Letter of Intent) with final lease clauses to spot deviations.",
+      "Email Body": "I need a comparison of the LOI and the executed lease for \"Luxury Retail Store.\" Focus on any changes to the build-out period or rent commencement date."
+    },
+    {
+      "Email Number": 41,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Could you quickly review the attached lease for \"Commercial Unit 7\" and identify any red flags, particularly regarding weak tenant protection clauses?"
+    },
+    {
+      "Email Number": 42,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Please scrutinize the \"High Street Retail\" lease (attached). I'm concerned about missing or unfavorable clauses for assignment and subletting."
+    },
+    {
+      "Email Number": 43,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "I need an assessment of the \"Industrial Warehouse B\" lease. Are there any clauses that might expose us to significant liability, such as inadequate indemnification?"
+    },
+    {
+      "Email Number": 44,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Review the lease for \"Office Suite 1200.\" I'm looking for any absence of a crucial break clause or highly restrictive early termination penalties."
+    },
+    {
+      "Email Number": 45,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Could you check the \"Residential Property D\" lease for any clauses that could lead to unexpected costs or responsibilities for the tenant?"
+    },
+    {
+      "Email Number": 46,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Analyze the \"Mixed-Use Building\" lease for any missing or vague clauses around force majeure events and their impact on rent."
+    },
+    {
+      "Email Number": 47,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Please examine the \"Shopping Arcade Unit 15\" lease. Are there any unfavorable clauses regarding exclusivity or co-tenancy requirements?"
+    },
+    {
+      "Email Number": 48,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "I'm concerned about the \"Tech Office Hub\" lease. Can you pinpoint any clauses that might compromise our data security or intellectual property rights?"
+    },
+    {
+      "Email Number": 49,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Review the \"Medical Clinic Space\" lease. I need to know if there are any clauses that could impact our ability to make necessary medical-specific alterations."
+    },
+    {
+      "Email Number": 50,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Please identify any missing or problematic clauses in the \"Restaurant Space\" lease related to landlord's right of entry or disruptive renovations."
+    },
+    {
+      "Email Number": 51,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Check the \"Data Center Lease\" for any clauses that might expose us to risks related to power outages or network interruptions."
+    },
+    {
+      "Email Number": 52,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Review the \"Education Facility Lease\" for any clauses that could hinder our ability to expand or contract space as student numbers fluctuate."
+    },
+    {
+      "Email Number": 53,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "I need to know if the \"Logistics Center Lease\" has any missing or unfavorable clauses regarding hazardous materials storage and disposal."
+    },
+    {
+      "Email Number": 54,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Please analyze the \"Manufacturing Plant Lease.\" Are there any environmental compliance clauses that seem overly burdensome or vague?"
+    },
+    {
+      "Email Number": 55,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Review the \"Retail Kiosk Lease.\" I'm particularly interested in any missing or problematic clauses concerning common area rules and regulations."
+    },
+    {
+      "Email Number": 56,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Could you check the \"Art Gallery Lease\" for any clauses that might restrict artistic expression or display methods?"
+    },
+    {
+      "Email Number": 57,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "I'm concerned about the \"Fitness Center Lease.\" Are there any clauses that might limit our operating hours or type of equipment?"
+    },
+    {
+      "Email Number": 58,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Please examine the \"Parking Garage Lease.\" Are there any clauses that could lead to unexpected increases in parking rates or restrictions on access?"
+    },
+    {
+      "Email Number": 59,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "Review the \"Vacant Land Lease.\" for any missing or unfavorable clauses regarding environmental remediation or future development."
+    },
+    {
+      "Email Number": 60,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "Detect potentially risky or missing lease clauses (e.g., subletting rights, break clauses)",
+      "Email Body": "I need an urgent review of the \"Hotel Property Lease.\" Are there any clauses that could impact our ability to renovate or rebrand without extensive landlord approval?"
+    },
+    {
+      "Email Number": 61,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Can you pull up information on \"Global Holdings Inc.\"? I'm looking for any recent legal issues or significant financial news."
+    },
+    {
+      "Email Number": 62,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Before we sign with \"Apex Development Group,\" please research their litigation history, especially any past disputes related to commercial real estate."
+    },
+    {
+      "Email Number": 63,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "I need a background check on \"Innovate Solutions LLC.\" Specifically, I'd like to know about any bankruptcy filings or major financial restructuring in the last decade."
+    },
+    {
+      "Email Number": 64,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Could you investigate the credibility of \"Premier Property Management\"? Are there any public records of tenant complaints or regulatory actions?"
+    },
+    {
+      "Email Number": 65,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Please provide a summary of any public controversies or significant negative press surrounding \"Urban Sprawl Realty.\""
+    },
+    {
+      "Email Number": 66,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Research \"East Coast Investments\" for any history of fraud allegations or major civil lawsuits."
+    },
+    {
+      "Email Number": 67,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "I'd like to know if \"Green Acres Holdings\" has been involved in any environmental litigation or disputes over land use."
+    },
+    {
+      "Email Number": 68,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Before we proceed with \"National Retail Brands,\" please check for any pending lawsuits or significant financial instability."
+    },
+    {
+      "Email Number": 69,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Could you find information on \"Westwood Construction Group\"'s past project delays or contractual disputes?"
+    },
+    {
+      "Email Number": 70,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Research \"Sentinel Security Services\" for any history of negligence claims or breaches of contract."
+    },
+    {
+      "Email Number": 71,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "I need a detailed report on \"Horizon Hospitality Group\"'s financial standing and any public records of debt restructuring."
+    },
+    {
+      "Email Number": 72,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Check for any legal actions or regulatory penalties against \"Prime Logistics Corp\" related to their distribution centers."
+    },
+    {
+      "Email Number": 73,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Investigate \"TerraForm Ventures\" for any history of failed developments or significant financial losses."
+    },
+    {
+      "Email Number": 74,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Could you research \"Summit Consulting Services\" for any accusations of professional misconduct or breaches of fiduciary duty?"
+    },
+    {
+      "Email Number": 75,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Please provide any public information on \"Coastal Developers Inc.\"'s history of construction defects or unresolved legal claims."
+    },
+    {
+      "Email Number": 76,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "I need a background check on \"Phoenix Solutions Group.\" Are there any records of significant employee disputes or unfair labor practices?"
+    },
+    {
+      "Email Number": 77,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Research \"Blue Sky Energy\" for any past environmental violations or regulatory fines."
+    },
+    {
+      "Email Number": 78,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Could you investigate \"Evergreen Asset Management\" for any signs of financial distress or significant investor withdrawals?"
+    },
+    {
+      "Email Number": 79,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "Please find any public information on \"Central City Corp\"'s involvement in criminal investigations or high-profile legal battles."
+    },
+    {
+      "Email Number": 80,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "Research details about a company involved in the lease (e.g., credibility, litigation history).",
+      "Email Body": "I need a comprehensive report on \"United Facilities Management\" focusing on their operational reliability and any history of service complaints."
+    },
+    {
+      "Email Number": 81,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "Please provide a timeline of key dates for the \"Oakwood Retail Center\" acquisition, including the due diligence deadline and escrow closing."
+    },
+    {
+      "Email Number": 82,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "I need to know the exact notice period for renewal for the \"Pinebrook Office Lease.\" Can you extract that date?"
+    },
+    {
+      "Email Number": 83,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "What are the important dates related to the possession and handover for the \"Greenwood Warehouse\" property?"
+    },
+    {
+      "Email Number": 84,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "Could you confirm the closing date for the \"Riverside Development\" project and any associated deadlines leading up to it?"
+    },
+    {
+      "Email Number": 85,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "Please extract all critical dates from the \"Sunset Plaza\" purchase agreement, especially those related to financing contingencies."
+    },
+    {
+      "Email Number": 86,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "I need to know the date by which the tenant must vacate the \"Maple Street Apartment\" and any penalties for holdover."
+    },
+    {
+      "Email Number": 87,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "What is the deadline for submitting the environmental reports for the \"Industrial Park West\" transaction?"
+    },
+    {
+      "Email Number": 88,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "Can you outline the dates for the various inspections required for the \"Downtown Lofts\" sale?"
+    },
+    {
+      "Email Number": 89,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "Please confirm the commencement date of the lease for \"Tech Hub Campus\" and the first rent payment date."
+    },
+    {
+      "Email Number": 90,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "I need a schedule of all option exercise dates for the \"Waterfront Restaurant\" lease."
+    },
+    {
+      "Email Number": 91,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "What is the latest date we can provide notice of termination for the \"Suburban Retail Unit\" lease without penalty?"
+    },
+    {
+      "Email Number": 92,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "Please extract the deadline for the landlord to complete their work on the \"Medical Office Suite\" before our occupancy."
+    },
+    {
+      "Email Number": 93,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "Can you provide a list of all payment due dates for the \"Luxury Condo\" purchase agreement, including any earnest money deadlines?"
+    },
+    {
+      "Email Number": 94,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "What are the dates for the tenant's right of first refusal or offer for the \"City Center Building\"?"
+    },
+    {
+      "Email Number": 95,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "I need to know the exact date by which we must deliver possession of the \"Rural Farmland\" after the sale."
+    },
+    {
+      "Email Number": 96,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "Please provide the critical dates for the completion of any pre-closing conditions on the \"Historic Renovation Project.\""
+    },
+    {
+      "Email Number": 97,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "What is the deadline for obtaining all necessary permits and approvals for the \"New Development Site\"?"
+    },
+    {
+      "Email Number": 98,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "Can you confirm the final walk-through date and key hand-over date for the \"Family Home Sale\"?"
+    },
+    {
+      "Email Number": 99,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "Please identify any dates related to rent abatements or free rent periods in the \"Start-up Office Lease.\""
+    },
+    {
+      "Email Number": 100,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "Extract or schedule transaction-related dates (escrow, closing, notice, possession).",
+      "Email Body": "What are the deadlines for any post-closing adjustments or reconciliations for the \"Large Commercial Building\" transaction?"
+    },
+    {
+      "Email Number": 101,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Please provide a summary of the key changes introduced in the first amendment to the \"Downtown Office Lease\" (attached)."
+    },
+    {
+      "Email Number": 102,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "I need an abstraction of the second amendment for the \"Retail Space B\" lease. Focus on how it alters the rent escalation schedule."
+    },
+    {
+      "Email Number": 103,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Compare the attached lease amendment for \"Industrial Unit 5\" with the original lease. What are the new terms regarding tenant improvements?"
+    },
+    {
+      "Email Number": 104,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Could you highlight all new clauses or modifications to existing clauses in the recent amendment to the \"Residential Lease Agreement for 123 Main St\"?"
+    },
+    {
+      "Email Number": 105,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Please summarize the impact of the latest amendment on the term length and renewal options for the \"Commercial Property Lease.\""
+    },
+    {
+      "Email Number": 106,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "I'm attaching an amendment to the \"Warehouse Facility Lease.\" Please identify any changes to the permitted use or restrictive covenants."
+    },
+    {
+      "Email Number": 107,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Review the amendment to the \"Mixed-Use Development Lease.\" What are the new provisions concerning common area charges?"
+    },
+    {
+      "Email Number": 108,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Please abstract any changes to the insurance requirements or indemnification clauses in the attached amendment for the \"Office Park Lease.\""
+    },
+    {
+      "Email Number": 109,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Summarize the alterations to the assignment and subletting rights as detailed in the recent amendment to the \"Medical Building Lease.\""
+    },
+    {
+      "Email Number": 110,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "I need a report on how the attached amendment changes the default and remedies clauses in the \"Shopping Center Lease.\""
+    },
+    {
+      "Email Number": 111,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Please identify any new obligations or responsibilities placed on the landlord or tenant in the amendment to the \"Restaurant Lease.\""
+    },
+    {
+      "Email Number": 112,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "What are the key changes to the parking provisions outlined in the amendment for the \"Residential Tower Lease\"?"
+    },
+    {
+      "Email Number": 113,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Could you highlight any changes to the option to expand or contract the leased premises in the amendment for the \"Logistics Hub Lease\"?"
+    },
+    {
+      "Email Number": 114,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Summarize any modifications to the condition precedent clauses in the attached amendment to the \"Development Site Lease.\""
+    },
+    {
+      "Email Number": 115,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Please review the amendment for \"Retail Unit 10\" and identify any changes to the signage rights or restrictions."
+    },
+    {
+      "Email Number": 116,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "What new terms or conditions have been added regarding hazardous materials in the amendment to the \"Laboratory Space Lease\"?"
+    },
+    {
+      "Email Number": 117,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "I need an abstraction of how the latest amendment affects the notice periods for various actions within the \"Corporate Campus Lease.\""
+    },
+    {
+      "Email Number": 118,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Please summarize any changes to the governing law or dispute resolution clauses in the amendment to the \"International Office Lease.\""
+    },
+    {
+      "Email Number": 119,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Could you highlight any new rent abatements or free rent periods introduced by the amendment to the \"Startup Incubator Lease\"?"
+    },
+    {
+      "Email Number": 120,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "Extract new terms from lease amendments and highlight what changed from the original.",
+      "Email Body": "Review the attached amendment for \"Multi-Family Property\" and identify any changes to the tenant's right of first refusal or purchase options."
+    },
+    {
+      "Email Number": 121,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "I have three sales listings for the \"Commerce Street Building.\" Please compare the asking price, cap rate, and price per square foot for each."
+    },
+    {
+      "Email Number": 122,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "We need a comparative analysis of the attached sales listings for \"Rural Acreage Parcel.\" Focus on acreage, zoning, and any existing structures."
+    },
+    {
+      "Email Number": 123,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "Compare the two sales packages for the \"Downtown Hotel.\" Provide a summary of the occupancy rates, revenue per available room (RevPAR), and proposed sale price."
+    },
+    {
+      "Email Number": 124,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "Please create a comparison chart for the three industrial property listings. Include total square footage, clear height, and asking price."
+    },
+    {
+      "Email Number": 125,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "I'm attaching multiple sales listings for the \"Residential Development Site.\" Compare the number of units permitted, lot size, and development costs."
+    },
+    {
+      "Email Number": 126,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "Compare the investment summaries for the \"Retail Portfolio\" listings. Highlight differences in NOI, cap rate, and lease expiry dates."
+    },
+    {
+      "Email Number": 127,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "We received several sales listings for \"Medical Office Condos.\" Please compare the individual unit sizes, common area fees, and asking price per square foot."
+    },
+    {
+      "Email Number": 128,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "Could you compare the three sales listings for \"Mixed-Use Building A\" focusing on commercial vs. residential square footage and income streams?"
+    },
+    {
+      "Email Number": 129,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "I need a comparison of the sales listings for \"Shopping Center Outparcel.\" Identify differences in traffic counts, frontage, and asking price."
+    },
+    {
+      "Email Number": 130,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "Compare the two sales listings for \"Historic Office Building\" regarding renovation costs, historical designations, and tenant mix."
+    },
+    {
+      "Email Number": 131,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "Please provide a comparative analysis of the sales listings for \"Self-Storage Facility.\" Include unit count, occupancy rate, and gross income."
+    },
+    {
+      "Email Number": 132,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "Compare the attached sales listings for \"Vacant Commercial Lot.\" Focus on zoning, utility access, and permissible uses."
+    },
+    {
+      "Email Number": 133,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "We have multiple sales listings for \"Farm Land with Water Rights.\" Compare the acreage, water rights, and asking price."
+    },
+    {
+      "Email Number": 134,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "Could you compare the sales listings for \"Data Center Property\" based on power capacity, fiber connectivity, and asking price?"
+    },
+    {
+      "Email Number": 135,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "Compare the sales packages for the \"Senior Living Facility.\" Highlight differences in bed count, amenity offerings, and financial performance."
+    },
+    {
+      "Email Number": 136,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "I need a comparison of the sales listings for \"Student Housing Complex.\" Focus on bed-to-bath ratio, occupancy, and proximity to universities."
+    },
+    {
+      "Email Number": 137,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "Compare the attached sales listings for \"Marina Property.\" Include dock count, slip sizes, and revenue streams."
+    },
+    {
+      "Email Number": 138,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "Please compare the sales listings for \"Restaurant Building with Equipment.\" Focus on seating capacity, kitchen equipment, and liquor license status."
+    },
+    {
+      "Email Number": 139,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "Compare the three sales listings for \"Gas Station Property.\" Include fuel sales volume, convenience store revenue, and environmental reports."
+    },
+    {
+      "Email Number": 140,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "Compare listing summaries across multiple broker listings to analyze pricing, sq ft, etc.",
+      "Email Body": "We have several sales listings for \"Automotive Repair Shop.\" Please compare the bay count, equipment included, and existing customer base information."
+    },
+    {
+      "Email Number": 141,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Compare the attached lease listings for \"Midtown Office Space.\" I need to identify which offers the lowest effective rent per square foot."
+    },
+    {
+      "Email Number": 142,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Please provide a comparative analysis of the \"Retail Kiosk\" lease listings. Focus on lease term, base rent, and percentage rent."
+    },
+    {
+      "Email Number": 143,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Compare the three lease proposals for \"Flex Space in Industrial Park.\" Highlight differences in tenant improvement allowance and free rent periods."
+    },
+    {
+      "Email Number": 144,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "I'm attaching several lease listings for \"Medical Office Suites.\" Please compare the build-out costs, common area fees, and any exclusive use provisions."
+    },
+    {
+      "Email Number": 145,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Compare the lease terms for \"Restaurant Space B\" across the different listings. Look for variations in vent hood requirements and outdoor seating allowances."
+    },
+    {
+      "Email Number": 146,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "We need a comparison of the \"Warehouse Space\" lease listings. Focus on clear height, loading dock availability, and power supply."
+    },
+    {
+      "Email Number": 147,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Could you compare the lease listings for \"Co-working Space\" regarding included amenities, flexible terms, and desk rates?"
+    },
+    {
+      "Email Number": 148,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Please analyze the \"Pop-Up Shop\" lease listings and identify the most favorable terms for short-term occupancy and marketing restrictions."
+    },
+    {
+      "Email Number": 149,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Compare the lease proposals for \"Research Lab Space.\" Highlight differences in specialized equipment access and environmental compliance clauses."
+    },
+    {
+      "Email Number": 150,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "I need a comparison of the \"Gym Space\" lease listings. Focus on ceiling height, existing build-out for locker rooms, and operating hours restrictions."
+    },
+    {
+      "Email Number": 151,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Compare the attached lease listings for \"Data Center Colocation.\" Include power density, cooling infrastructure, and connectivity options."
+    },
+    {
+      "Email Number": 152,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Please provide a comparative summary of the \"Gallery Space\" lease listings, focusing on wall space, lighting systems, and any restrictions on art display."
+    },
+    {
+      "Email Number": 153,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Compare the lease offerings for \"Childcare Facility Space.\" Look for differences in outdoor play area requirements and licensing support."
+    },
+    {
+      "Email Number": 154,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "I'm reviewing lease listings for \"Automotive Service Bay.\" Please compare the hoist capacity, waste disposal clauses, and hazardous materials storage."
+    },
+    {
+      "Email Number": 155,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Compare the lease terms for \"Beauty Salon Space.\" Highlight differences in plumbing infrastructure, existing styling stations, and ventilation."
+    },
+    {
+      "Email Number": 156,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Could you compare the lease listings for \"Community Center Space\" regarding event capacity, kitchen facilities, and accessibility features?"
+    },
+    {
+      "Email Number": 157,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Please analyze the \"Cafeteria Space\" lease listings. Focus on existing kitchen equipment, seating capacity, and grease trap requirements."
+    },
+    {
+      "Email Number": 158,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Compare the lease proposals for \"Bank Branch Location.\" Highlight differences in vault specifications, drive-thru access, and security systems."
+    },
+    {
+      "Email Number": 159,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "I need a comparison of the \"Pet Grooming Salon\" lease listings. Focus on floor drainage, ventilation, and soundproofing provisions."
+    },
+    {
+      "Email Number": 160,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to above, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Compare the attached lease listings for \"Recording Studio Space.\" Include soundproofing quality, control room setup, and access to common areas."
+    }
+  ]

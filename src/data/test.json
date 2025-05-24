@@ -1,0 +1,50 @@
+[
+    {
+      "Email Number": 1,
+      "Intent Category": "Intent_Transaction_Date_navigator",
+      "Intent Description": "This intent aims to extract a schedule of important dates related to a real estate transaction, focusing on critical milestones like closing and due diligence periods.",
+      "Email Body": "Hi team,\nCan you pull together a schedule of important dates for the escrow process on the 125 King St deal? We're especially concerned with closing and due diligence periods.\nThanks!"
+    },
+    {
+      "Email Number": 2,
+      "Intent Category": "Intent_Clause_Protect",
+      "Intent Description": "This intent focuses on identifying 'red flags' or unfavorable clauses within a lease agreement, such as missing indemnity clauses or disadvantageous assignment terms, to protect the client's interests.",
+      "Email Body": "Hey,\nI’m reviewing the lease on the 3rd Avenue property. Can you check if there are any red flags—like missing indemnity clauses or unfavorable assignment terms?"
+    },
+    {
+      "Email Number": 3,
+      "Intent Category": "Intent_Lease_Abstraction",
+      "Intent Description": "This intent is to abstract key financial and contractual terms from a lease document, including base rent, commencement and expiry dates, renewal options, and escalation schedules.",
+      "Email Body": "Please abstract the lease for the Johnson project (PDF attached). We need to know the base rent, commencement and expiry dates, renewal options, and escalation schedule."
+    },
+    {
+      "Email Number": 4,
+      "Intent Category": "Intent_Comparison_LOI_Lease",
+      "Intent Description": "This intent involves comparing a signed lease agreement against a previously submitted Letter of Intent (LOI) to identify any changes or additions in terms, particularly regarding specific allowances like Tenant Improvement (TI) allowances.",
+      "Email Body": "Compare the signed lease to the LOI we submitted last month. I want to know what terms got changed or added, especially around TI allowances."
+    },
+    {
+      "Email Number": 5,
+      "Intent Category": "Intent_Company_research",
+      "Intent Description": "This intent is to conduct a background check on a specific company, focusing on publicly available information such as disputes or bankruptcies, to inform a decision before proceeding with a transaction.",
+      "Email Body": "Could you do a background check on Wexford Corp before we proceed? I’m particularly interested in any public disputes or bankruptcies in the past 5 years."
+    },
+    {
+      "Email Number": 6,
+      "Intent Category": "Intent_Amendment_Abstraction",
+      "Intent Description": "This intent aims to summarize the key changes introduced by the latest amendment to an original lease agreement.",
+      "Email Body": "Please summarize the changes from the latest amendment to the original lease for the Grandview Tower property."
+    },
+    {
+      "Email Number": 7,
+      "Intent Category": "Intent_Sales_Listings_Comparison",
+      "Intent Description": "This intent focuses on comparing multiple broker sales packages for a property, providing a side-by-side summary of key financial metrics such as pricing, cap rate, and average price per square foot (PSF).",
+      "Email Body": "We have three broker sales packages for the 42nd St building. Can you give me a side-by-side summary of pricing, cap rate, and avg. PSF?"
+    },
+    {
+      "Email Number": 8,
+      "Intent Category": "Intent_Lease_Listings_Comparison",
+      "Intent Description": "Similar to sales listings comparison, but focuses on lease listings to identify best terms, overlaps, and gaps.",
+      "Email Body": "Compare the lease listings we received for the \"Downtown Office Space.\" Highlight differences in common area maintenance (CAM) charges, tenant improvement (TI) allowances, and parking availability."
+    }
+  ]

@@ -1,0 +1,32 @@
+{
+  "label2id": {
+    "Intent_Amendment_Abstraction": 0,
+    "Intent_Clause_Protect": 1,
+    "Intent_Company_research": 2,
+    "Intent_Comparison_LOI_Lease": 3,
+    "Intent_Lease_Abstraction": 4,
+    "Intent_Lease_Listings_Comparison": 5,
+    "Intent_Sales_Listings_Comparison": 6,
+    "Intent_Transaction_Date_navigator": 7
+  },
+  "id2label": {
+    "0": "Intent_Amendment_Abstraction",
+    "1": "Intent_Clause_Protect",
+    "2": "Intent_Company_research",
+    "3": "Intent_Comparison_LOI_Lease",
+    "4": "Intent_Lease_Abstraction",
+    "5": "Intent_Lease_Listings_Comparison",
+    "6": "Intent_Sales_Listings_Comparison",
+    "7": "Intent_Transaction_Date_navigator"
+  },
+  "labels_ordered": [
+    "Intent_Amendment_Abstraction",
+    "Intent_Clause_Protect",
+    "Intent_Company_research",
+    "Intent_Comparison_LOI_Lease",
+    "Intent_Lease_Abstraction",
+    "Intent_Lease_Listings_Comparison",
+    "Intent_Sales_Listings_Comparison",
+    "Intent_Transaction_Date_navigator"
+  ]
+}

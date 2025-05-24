@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Intent Classifier</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; }
+        .container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #result { margin-top: 20px; padding: 10px; border: 1px solid #eee; border-radius: 4px; background-color: #e9ecef; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Email Intent Classifier</h1>
+        <textarea id="emailText" rows="10" placeholder="Enter email text here..."></textarea>
+        <button onclick="classifyIntent()">Classify Intent</button>
+        <div id="result">
+            <p>Predicted Intents: <span id="intent">---</span></p>
+            <p id="confidenceDisplay">Confidence: <span id="confidence">---</span></p>
+        </div>
+    </div>
+
+    <script>
+        async function classifyIntent() {
+            const emailText = document.getElementById('emailText').value;
+            const resultIntentSpan = document.getElementById('intent');
+            const resultConfidenceSpan = document.getElementById('confidence');
+            const confidenceDisplayP = document.getElementById('confidenceDisplay');
+
+            resultIntentSpan.textContent = 'Classifying...';
+            resultConfidenceSpan.textContent = '---';
+            confidenceDisplayP.style.display = 'block';
+
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email: emailText }),
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({ detail: "Unknown error" }));
+                    throw new Error(`HTTP error! status: ${response.status}, message: ${errorData.detail || response.statusText}`);
+                }
+
+                const data = await response.json();
+
+                if (data.predicted_intents && Array.isArray(data.predicted_intents)) {
+                    resultIntentSpan.textContent = data.predicted_intents.join(', ');
+                    if (data.predicted_intents.length > 0 && data.predicted_intents[0] !== "error during prediction") {
+                        confidenceDisplayP.style.display = 'none';
+                    } else {
+                        resultConfidenceSpan.textContent = 'N/A for multiple intents or error';
+                    }
+                } else {
+                    resultIntentSpan.textContent = 'Unexpected response format';
+                    resultConfidenceSpan.textContent = '---';
+                }
+
+            } catch (error) {
+                console.error('Error:', error);
+                resultIntentSpan.textContent = `Error: ${error.message || 'Error classifying'}`;
+                resultConfidenceSpan.textContent = '---';
+            }
+        }
+    </script>
+</body>
+</html> 

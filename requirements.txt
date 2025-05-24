@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+transformers
+torch
+pandas
+scikit-learn
+imodels==0.0.1  # if using early stopping callback
+python-dotenv
