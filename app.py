@@ -26,8 +26,8 @@ def setup_logging():
         try:
             os.makedirs(logs_dir)
             logger.info(f"Successfully created logs directory: {logs_dir}")
-    except OSError as e:
-            logger.error(f"Could not create logs directory: {e}")
+        except OSError as e:
+                logger.error(f"Could not create logs directory: {e}")
             # Depending on policy, might exit or continue with stderr logging only
     
     logger.add(os.path.join(logs_dir, "app.log"), rotation="500 MB", level="INFO")
@@ -45,27 +45,27 @@ def load_app_config():
         # For now, we'll let Jinja2Templates handle it later if still missing.
 
     # Corrected path for label_map.json (train.py saves it to project root)
-label_map_path = os.path.join(APP_BASE_DIR, 'label_map.json')
-if not os.path.exists(label_map_path):
+    label_map_path = os.path.join(APP_BASE_DIR, "src","constants", 'label_map.json')
+    if not os.path.exists(label_map_path):
         logger.error(f"label_map.json not found at {label_map_path}. Ensure train.py has run and saved it.")
-    sys.exit(f"Error: label_map.json not found at {label_map_path}")
+        sys.exit(f"Error: label_map.json not found at {label_map_path}")
 
-with open(label_map_path) as f:
-    label_map_content = json.load(f)
+    with open(label_map_path) as f:
+        label_map_content = json.load(f)
 
-if "labels_ordered" not in label_map_content:
+    if "labels_ordered" not in label_map_content:
         logger.error("'labels_ordered' key not found in label_map.json. This is required.")
         sys.exit("Error: 'labels_ordered' not found in label_map.json.")
     
-all_labels_ordered = label_map_content["labels_ordered"]
-num_labels = len(all_labels_ordered)
-logger.info(f"Label mapping loaded. {num_labels} labels: {all_labels_ordered}")
+    all_labels_ordered = label_map_content["labels_ordered"]
+    num_labels = len(all_labels_ordered)
+    logger.info(f"Label mapping loaded. {num_labels} labels: {all_labels_ordered}")
 
     return templates_dir, all_labels_ordered, num_labels
 
 def load_model_and_tokenizer(num_labels_from_config: int):
     """Loads the ML model and tokenizer."""
-logger.info("Loading model and tokenizer...")
+    logger.info("Loading model and tokenizer...")
 
     # Corrected model path (train.py saves to <project_root>/app/model/)
     model_dir_path = os.path.join(APP_BASE_DIR, 'src', 'outputs', 'checkpoint-320')
@@ -73,22 +73,22 @@ logger.info("Loading model and tokenizer...")
         logger.error(f"Model directory not found at {model_dir_path}. Ensure train.py has run and saved the model to ./app/model/.")
         sys.exit(f"Error: Model directory not found at {model_dir_path}")
 
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
-logger.info(f"Using device: {device}")
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    logger.info(f"Using device: {device}")
 
-model = AutoModelForSequenceClassification.from_pretrained(
+    model = AutoModelForSequenceClassification.from_pretrained(
         model_dir_path,
         problem_type="multi_label_classification",
         num_labels=num_labels_from_config
-).to(device)
-model.eval()
+    ).to(device)
+    model.eval()
     tokenizer = AutoTokenizer.from_pretrained(model_dir_path)
-logger.info("Model and tokenizer loaded successfully.")
+    logger.info("Model and tokenizer loaded successfully.")
 
     # Sanity check
     if model.config.num_labels != num_labels_from_config:
-    logger.error(
-        f"CRITICAL MISMATCH: Model config num_labels ({model.config.num_labels}) "
+        logger.error(
+            f"CRITICAL MISMATCH: Model config num_labels ({model.config.num_labels}) "
             f"does not match label_map num_labels ({num_labels_from_config}). "
             "This will lead to incorrect predictions."
         )
