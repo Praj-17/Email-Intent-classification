@@ -25,8 +25,8 @@ COPY src/constants/label_map.json ./src/constants/
 # you can uncomment the line below.
 # COPY train.py ./
 
-EXPOSE 8000
+EXPOSE 8080
 
 # Command to run the FastAPI application using uvicorn, managed by uv.
 # Ensure 'uvicorn' is listed as a project dependency in your pyproject.toml.
-CMD ["uv", "run", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uv", "run", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
