@@ -39,33 +39,32 @@ jobs:
           echo "Temporary download directory: $DOWNLOAD_ROOT_DIR"
 
           echo "Downloading model from Google Drive folder with ID: $GDRIVE_MODEL_FILE_ID"
-          # gdown --folder downloads the GDrive folder as a zip to DOWNLOAD_ROOT_DIR
-          # and then extracts it into a subdirectory within DOWNLOAD_ROOT_DIR (e.g., DOWNLOAD_ROOT_DIR/<gdrive_folder_name>/)
+          # gdown --folder with -O DOWNLOAD_ROOT_DIR downloads the GDrive folder's contents
+          # directly into DOWNLOAD_ROOT_DIR.
           if ! gdown --folder "$GDRIVE_MODEL_FILE_ID" -O "$DOWNLOAD_ROOT_DIR"; then
-            echo "Error: gdown failed to download or extract the folder."
-            exit 1
-          fi
-
-          # Find the name of the folder created by gdown inside DOWNLOAD_ROOT_DIR
-          # (gdown extracts to a sub-directory named after the original GDrive folder)
-          EXTRACTED_FOLDER_PATH=$(find "$DOWNLOAD_ROOT_DIR" -mindepth 1 -maxdepth 1 -type d -print -quit)
-
-          if [ -z "$EXTRACTED_FOLDER_PATH" ] || [ ! -d "$EXTRACTED_FOLDER_PATH" ]; then
-            echo "Error: Could not find extracted model folder in $DOWNLOAD_ROOT_DIR."
+            echo "Error: gdown failed to download the folder contents."
             echo "Contents of $DOWNLOAD_ROOT_DIR:"
             ls -A "$DOWNLOAD_ROOT_DIR"
             exit 1
           fi
+
+          echo "Download complete. Checking contents of $DOWNLOAD_ROOT_DIR:"
+          ls -A "$DOWNLOAD_ROOT_DIR"
+
+          # Check if any files were downloaded into DOWNLOAD_ROOT_DIR
+          if [ -z "$(ls -A "$DOWNLOAD_ROOT_DIR")" ]; then
+            echo "Error: No files found in $DOWNLOAD_ROOT_DIR after gdown."
+            echo "Please check if GDrive folder ID $GDRIVE_MODEL_FILE_ID is correct and folder is not empty."
+            exit 1
+          fi
           
-          echo "Found extracted model files at: $EXTRACTED_FOLDER_PATH"
-          echo "Moving contents to $MODEL_CONTENTS_TARGET_DIR/"
-          # Move the *contents* of the extracted folder to the target model directory
-          # Ensure source path ends with a slash to copy contents, not the folder itself
-          if ! mv "$EXTRACTED_FOLDER_PATH"/* "$MODEL_CONTENTS_TARGET_DIR/"; then
+          echo "Moving contents from $DOWNLOAD_ROOT_DIR/* to $MODEL_CONTENTS_TARGET_DIR/"
+          # Move the *contents* of DOWNLOAD_ROOT_DIR to the target model directory
+          if ! mv "$DOWNLOAD_ROOT_DIR"/* "$MODEL_CONTENTS_TARGET_DIR/"; then
              echo "Error: Failed to move model files."
-             echo "Contents of $EXTRACTED_FOLDER_PATH:"
-             ls -A "$EXTRACTED_FOLDER_PATH"
-             echo "Contents of $MODEL_CONTENTS_TARGET_DIR:"
+             echo "Contents of $DOWNLOAD_ROOT_DIR (source):"
+             ls -A "$DOWNLOAD_ROOT_DIR"
+             echo "Contents of $MODEL_CONTENTS_TARGET_DIR (destination):"
              ls -A "$MODEL_CONTENTS_TARGET_DIR"
              exit 1
           fi
