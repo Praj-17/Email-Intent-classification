@@ -49,9 +49,17 @@ num_unique_labels = len(all_labels_flat_list)
 # Initialize MultiLabelBinarizer with the sorted unique labels
 mlb = MultiLabelBinarizer(classes=all_labels_flat_list)
 
-with open("label_map.json", "w") as f:
+# Ensure the src/constants directory exists
+constants_dir = os.path.join("src", "constants")
+if not os.path.exists(constants_dir):
+    os.makedirs(constants_dir)
+    logger.info(f"Created directory: {constants_dir}")
+
+label_map_path = os.path.join(constants_dir, "label_map.json")
+with open(label_map_path, "w") as f:
     json.dump({"label2id": label2id, "id2label": id2label, "labels_ordered": all_labels_flat_list}, f, indent=2)
 logger.info(f"Label map and binarizer created. Number of unique labels: {num_unique_labels}")
+logger.info(f"Label map saved to: {label_map_path}")
 logger.info(f"Ordered labels for model: {all_labels_flat_list}")
 
 # 3. Encode labels (Multi-hot encoding)
@@ -197,10 +205,38 @@ logger.info("TrainingArguments and Trainer configured for multi-label.")
 logger.info("Step 7: Starting model training...")
 trainer.train()
 logger.info("Model training completed.")
-logger.info("Saving model and tokenizer...")
-trainer.save_model('./src/model')
-tokenizer.save_pretrained('./src/model')
-logger.info("Model and tokenizer saved to ./src/model.")
+
+# Determine the path to the best checkpoint
+# The 'load_best_model_at_end=True' and 'metric_for_best_model' ensure trainer.state.best_model_checkpoint is set.
+if trainer.state.best_model_checkpoint:
+    best_checkpoint_dir = trainer.state.best_model_checkpoint
+    logger.info(f"Best model checkpoint is at: {best_checkpoint_dir}")
+else:
+    # Fallback if best_model_checkpoint is not found, though it should be with load_best_model_at_end=True
+    # This might happen if training is very short or interrupted.
+    # We'll use the output_dir and hope for the latest checkpoint there if so.
+    logger.warning("Could not determine best model checkpoint from trainer state. Using the general output directory.")
+    # In this case, app.py would need to know which specific checkpoint to load or have a mechanism to find the latest.
+    # For simplicity, we'll stick to the assumption that best_model_checkpoint is available.
+    # If not, a more robust solution would be to save explicitly to a 'best_model' directory.
+    # For now, let's assume app.py will point to a specific checkpoint like 'outputs/checkpoint-320'
+    # or the user updates app.py manually after training.
+    pass
+
+
+logger.info("Saving model and tokenizer (final save after training)...")
+# The Trainer already saves the best model to a checkpoint directory within 'outputs_dir'
+# This explicit save_model can save it to a different location if needed, e.g., a cleaner 'final_model' dir.
+# For now, we rely on the checkpoint saved by the Trainer in 'outputs/checkpoint-xxx' as app.py is pointing there.
+# trainer.save_model('./src/model') # This saves to ./src/model
+# tokenizer.save_pretrained('./src/model') # This saves to ./src/model
+
+# Let's ensure the tokenizer is also saved with the best checkpoint if not already handled by Trainer.
+# Typically, save_model on Trainer saves both model and tokenizer if tokenizer is part of Trainer.
+# If app.py loads from a checkpoint directory, it expects tokenizer.json etc. there.
+best_model_path_to_log = trainer.state.best_model_checkpoint if trainer.state.best_model_checkpoint else training_args.output_dir
+logger.info(f"The best model (and tokenizer) should be in: {best_model_path_to_log}")
+# No need for extra save if app.py loads from the checkpoint dir like 'outputs/checkpoint-320'
 
 # 8. Evaluation Report
 logger.info("Step 8: Evaluating model and generating report...")

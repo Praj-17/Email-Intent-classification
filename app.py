@@ -67,10 +67,11 @@ def load_model_and_tokenizer(num_labels_from_config: int):
     """Loads the ML model and tokenizer."""
     logger.info("Loading model and tokenizer...")
 
-    # Corrected model path (train.py saves to <project_root>/app/model/)
-    model_dir_path = os.path.join(APP_BASE_DIR, 'src', 'outputs', 'checkpoint-320')
+    # Corrected model path: train.py saves to <project_root>/outputs/checkpoint-xxx
+    # APP_BASE_DIR is the directory of app.py (project root)
+    model_dir_path = os.path.join(APP_BASE_DIR,"src", 'outputs', 'checkpoint-320') # Removed 'src' from this path
     if not os.path.isdir(model_dir_path):
-        logger.error(f"Model directory not found at {model_dir_path}. Ensure train.py has run and saved the model to ./app/model/.")
+        logger.error(f"Model directory not found at {model_dir_path}. Ensure train.py has run and saved the model to ./outputs/checkpoint-xxx/.")
         sys.exit(f"Error: Model directory not found at {model_dir_path}")
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'

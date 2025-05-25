@@ -11,18 +11,160 @@
         button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
         button:hover { background-color: #0056b3; }
         #result { margin-top: 20px; padding: 10px; border: 1px solid #eee; border-radius: 4px; background-color: #e9ecef; }
-        h1 { color: #333; }
+        h1 { color: #333; text-align: center; }
+
+        /* Styles for the Intents Grid */
+        .intents-display-section { margin-top: 30px; }
+        .intents-display-section h2 { color: #333; margin-bottom: 20px; text-align: center; }
+        .intents-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+            gap: 20px; /* Space between intent items */
+        }
+        .intent-item {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+        }
+        .intent-item h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #007bff;
+        }
+        .intent-item p {
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        .intent-item pre {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 4px;
+            white-space: pre-wrap; 
+            word-wrap: break-word; 
+            font-size: 0.9em;
+        }
+        .test-data-note {
+            font-size: 0.9em;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* Styles for the new Contact Details Section */
+        .contact-details-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .contact-details-section h2 { color: #333; margin-bottom: 15px; }
+        .contact-details-section h3 { color: #555; margin-top: 10px; margin-bottom: 5px; font-size: 1.1em; }
+        .contact-details-section p, .contact-details-section a { font-size: 1em; line-height: 1.6; }
+        .contact-details-section a { color: #007bff; text-decoration: none; }
+        .contact-details-section a:hover { text-decoration: underline; }
+        .contact-details-section img { vertical-align: middle; margin-right: 8px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Email Intent Classifier</h1>
+        <h1>Email Intent Classifier for Real Estate</h1>
         <textarea id="emailText" rows="10" placeholder="Enter email text here..."></textarea>
         <button onclick="classifyIntent()">Classify Intent</button>
         <div id="result">
             <p>Predicted Intents: <span id="intent">---</span></p>
             <p id="confidenceDisplay">Confidence: <span id="confidence">---</span></p>
         </div>
+    </div>
+
+    <div class="container intents-display-section">
+        <h2>Supported Email Intents</h2>
+        <p class="test-data-note">Note: The example emails below are not part of the model's training data. Feel free to use them to test the classifier!</p>
+        <div class="intents-grid">
+            <div class="intent-item">
+                <h4>Intent_Transaction_Date_navigator</h4>
+                <p><strong>Description:</strong> This intent aims to extract a schedule of important dates related to a real estate transaction, focusing on critical milestones like closing and due diligence periods.</p>
+                <p><strong>Example Email:</strong></p>
+                <pre>Hi team,\nCan you pull together a schedule of important dates for the escrow process on the 125 King St deal? We're especially concerned with closing and due diligence periods.\nThanks!</pre>
+            </div>
+            <div class="intent-item">
+                <h4>Intent_Clause_Protect</h4>
+                <p><strong>Description:</strong> This intent focuses on identifying 'red flags' or unfavorable clauses within a lease agreement, such as missing indemnity clauses or disadvantageous assignment terms, to protect the client's interests.</p>
+                <p><strong>Example Email:</strong></p>
+                <pre>Hey,\nI'm reviewing the lease on the 3rd Avenue property. Can you check if there are any red flags—like missing indemnity clauses or unfavorable assignment terms?</pre>
+            </div>
+            <div class="intent-item">
+                <h4>Intent_Lease_Abstraction</h4>
+                <p><strong>Description:</strong> This intent is to abstract key financial and contractual terms from a lease document, including base rent, commencement and expiry dates, renewal options, and escalation schedules.</p>
+                <p><strong>Example Email:</strong></p>
+                <pre>Please abstract the lease for the Johnson project (PDF attached). We need to know the base rent, commencement and expiry dates, renewal options, and escalation schedule.</pre>
+            </div>
+            <div class="intent-item">
+                <h4>Intent_Comparison_LOI_Lease</h4>
+                <p><strong>Description:</strong> This intent involves comparing a signed lease agreement against a previously submitted Letter of Intent (LOI) to identify any changes or additions in terms, particularly regarding specific allowances like Tenant Improvement (TI) allowances.</p>
+                <p><strong>Example Email:</strong></p>
+                <pre>Compare the signed lease to the LOI we submitted last month. I want to know what terms got changed or added, especially around TI allowances.</pre>
+            </div>
+            <div class="intent-item">
+                <h4>Intent_Company_research</h4>
+                <p><strong>Description:</strong> This intent is to conduct a background check on a specific company, focusing on publicly available information such as disputes or bankruptcies, to inform a decision before proceeding with a transaction.</p>
+                <p><strong>Example Email:</strong></p>
+                <pre>Could you do a background check on Wexford Corp before we proceed? I'm particularly interested in any public disputes or bankruptcies in the past 5 years.</pre>
+            </div>
+            <div class="intent-item">
+                <h4>Intent_Amendment_Abstraction</h4>
+                <p><strong>Description:</strong> This intent aims to summarize the key changes introduced by the latest amendment to an original lease agreement.</p>
+                <p><strong>Example Email:</strong></p>
+                <pre>Please summarize the changes from the latest amendment to the original lease for the Grandview Tower property.</pre>
+            </div>
+            <div class="intent-item">
+                <h4>Intent_Sales_Listings_Comparison</h4>
+                <p><strong>Description:</strong> This intent focuses on comparing multiple broker sales packages for a property, providing a side-by-side summary of key financial metrics such as pricing, cap rate, and average price per square foot (PSF).</p>
+                <p><strong>Example Email:</strong></p>
+                <pre>We have three broker sales packages for the 42nd St building. Can you give me a side-by-side summary of pricing, cap rate, and avg. PSF?</pre>
+            </div>
+            <div class="intent-item">
+                <h4>Intent_Lease_Listings_Comparison</h4>
+                <p><strong>Description:</strong> Similar to sales listings comparison, but focuses on lease listings to identify best terms, overlaps, and gaps.</p>
+                <p><strong>Example Email:</strong></p>
+                <pre>Compare the lease listings we received for the "Downtown Office Space." Highlight differences in common area maintenance (CAM) charges, tenant improvement (TI) allowances, and parking availability.</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="container contact-details-section">
+        <h2>Like my work? Contact me now!</h2>
+        
+        <h3>📞 Contact Information</h3>
+        <p>Feel free to reach out through any of the following platforms 😊:</p>
+
+        <h3>Email</h3>
+        <p><a href="mailto:pwaykos1@gmail.com">pwaykos1@gmail.com</a></p>
+
+        <h3>Phone</h3>
+        <p><a href="tel:+917249542810">7249542810</a></p> 
+
+        <h3>My Professional Links</h3>
+        <p><a href="https://www.linkedin.com/in/prajwal-waykos/" target="_blank">
+            <img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="LinkedIn" style="width:24px; height:24px;"> LinkedIn Profile
+        </a></p>
+        <p><a href="https://drive.google.com/file/d/1MJ8RRb9CTJ-aCDGgKj1CJb7tKUy8kcNt/view?usp=sharing" target="_blank">
+            <img src="https://img.icons8.com/nolan/64/document.png" alt="Resume" style="width:24px; height:24px;"> Resume
+        </a></p>
+
+        <h3>My GitHub Profile</h3>
+        <p><a href="https://github.com/praj-17" target="_blank">
+            <img src="https://img.icons8.com/nolan/64/github.png" alt="GitHub" style="width:32px; height:32px;"> Praj-17 on GitHub
+        </a></p>
+
+        <h3>Project Links</h3>
+        <p><a href="https://github.com/Praj-17/Email-Intent-classification" target="_blank">
+            <img src="https://img.icons8.com/nolan/64/github.png" alt="Project GitHub" style="width:32px; height:32px;"> Project GitHub Repository
+        </a></p>
+        <p><a href="https://hub.docker.com/r/prajwal1717/email-classification-real-estate" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/docker.png" alt="DockerHub" style="width:32px; height:32px;"> Project DockerHub Repository
+        </a></p>
     </div>
 
     <script>
@@ -34,7 +176,13 @@
 
             resultIntentSpan.textContent = 'Classifying...';
             resultConfidenceSpan.textContent = '---';
-            confidenceDisplayP.style.display = 'block';
+            confidenceDisplayP.style.display = 'block'; // Show confidence initially, hide if not applicable
+
+            if (!emailText.trim()) {
+                resultIntentSpan.textContent = 'Please enter some email text.';
+                resultConfidenceSpan.textContent = '---';
+                return;
+            }
 
             try {
                 const response = await fetch('/predict', {
@@ -45,29 +193,40 @@
                     body: JSON.stringify({ email: emailText }),
                 });
 
+                const data = await response.json(); // Try to parse JSON regardless of response.ok
+
                 if (!response.ok) {
-                    const errorData = await response.json().catch(() => ({ detail: "Unknown error" }));
-                    throw new Error(`HTTP error! status: ${response.status}, message: ${errorData.detail || response.statusText}`);
+                    // Server returned an error (e.g., 4xx, 5xx)
+                    // data might contain { "detail": "error message" } from FastAPI
+                    const errorMessage = data.detail || `HTTP error! status: ${response.status}`;
+                    throw new Error(errorMessage);
                 }
 
-                const data = await response.json();
 
                 if (data.predicted_intents && Array.isArray(data.predicted_intents)) {
-                    resultIntentSpan.textContent = data.predicted_intents.join(', ');
-                    if (data.predicted_intents.length > 0 && data.predicted_intents[0] !== "error during prediction") {
-                        confidenceDisplayP.style.display = 'none';
+                    if (data.predicted_intents.length === 0) {
+                        resultIntentSpan.textContent = 'No intent classified.';
+                        confidenceDisplayP.style.display = 'none'; // Hide confidence if no intent
+                    } else if (data.predicted_intents[0] === "error during prediction") {
+                        resultIntentSpan.textContent = data.error_detail || 'Error during prediction.';
+                        resultConfidenceSpan.textContent = 'N/A';
+                        confidenceDisplayP.style.display = 'block';
                     } else {
-                        resultConfidenceSpan.textContent = 'N/A for multiple intents or error';
+                        resultIntentSpan.textContent = data.predicted_intents.join(', ');
+                        // Only hide confidence if there are valid intents and it's not a multi-label confidence scenario
+                        // For now, we are not displaying individual confidences for multi-labels.
+                        confidenceDisplayP.style.display = 'none'; 
                     }
                 } else {
-                    resultIntentSpan.textContent = 'Unexpected response format';
+                    resultIntentSpan.textContent = 'Unexpected response format from server.';
                     resultConfidenceSpan.textContent = '---';
                 }
 
             } catch (error) {
                 console.error('Error:', error);
-                resultIntentSpan.textContent = `Error: ${error.message || 'Error classifying'}`;
+                resultIntentSpan.textContent = `Error: ${error.message || 'Failed to classify intent. Please check console.'}`;
                 resultConfidenceSpan.textContent = '---';
+                confidenceDisplayP.style.display = 'block'; // Ensure confidence display is reset or shown
             }
         }
     </script>

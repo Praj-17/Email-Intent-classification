@@ -242,3 +242,16 @@ Could you please assist with two urgent ...
 2025-05-25 00:36:56.877 | INFO     | app:load_model_and_tokenizer:86 - Model and tokenizer loaded successfully.
 2025-05-25 00:36:56.878 | INFO     | app:load_model_and_tokenizer:96 - Model configured num_labels (8) matches label_map (8).
 2025-05-25 00:36:56.879 | INFO     | app:<module>:112 - FastAPI app initialized.
+2025-05-25 13:13:51.001 | INFO     | app:setup_logging:34 - Logging configured.
+2025-05-25 13:13:51.002 | INFO     | app:load_app_config:38 - Loading application configuration...
+2025-05-25 13:13:51.014 | INFO     | app:load_app_config:62 - Label mapping loaded. 8 labels: ['Intent_Amendment_Abstraction', 'Intent_Clause_Protect', 'Intent_Company_research', 'Intent_Comparison_LOI_Lease', 'Intent_Lease_Abstraction', 'Intent_Lease_Listings_Comparison', 'Intent_Sales_Listings_Comparison', 'Intent_Transaction_Date_navigator']
+2025-05-25 13:13:51.015 | INFO     | app:load_model_and_tokenizer:68 - Loading model and tokenizer...
+2025-05-25 13:13:51.016 | ERROR    | app:load_model_and_tokenizer:74 - Model directory not found at D:\Prajwal\Email Intent classification\outputs\checkpoint-320. Ensure train.py has run and saved the model to ./outputs/checkpoint-xxx/.
+2025-05-25 13:14:53.696 | INFO     | app:setup_logging:34 - Logging configured.
+2025-05-25 13:14:53.696 | INFO     | app:load_app_config:38 - Loading application configuration...
+2025-05-25 13:14:53.697 | INFO     | app:load_app_config:62 - Label mapping loaded. 8 labels: ['Intent_Amendment_Abstraction', 'Intent_Clause_Protect', 'Intent_Company_research', 'Intent_Comparison_LOI_Lease', 'Intent_Lease_Abstraction', 'Intent_Lease_Listings_Comparison', 'Intent_Sales_Listings_Comparison', 'Intent_Transaction_Date_navigator']
+2025-05-25 13:14:53.698 | INFO     | app:load_model_and_tokenizer:68 - Loading model and tokenizer...
+2025-05-25 13:14:53.698 | INFO     | app:load_model_and_tokenizer:78 - Using device: cpu
+2025-05-25 13:15:01.036 | INFO     | app:load_model_and_tokenizer:87 - Model and tokenizer loaded successfully.
+2025-05-25 13:15:01.039 | INFO     | app:load_model_and_tokenizer:97 - Model configured num_labels (8) matches label_map (8).
+2025-05-25 13:15:01.040 | INFO     | app:<module>:113 - FastAPI app initialized.
